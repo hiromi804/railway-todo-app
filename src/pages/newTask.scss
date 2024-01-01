@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+.new-task {
+  width: 1000px;
+  margin: 0 auto;
+  &-form {
+    color: #555555;
+    .new-task-select-list,
+    .new-task-title,
+    .new-task-detail,
+    .new-task-limit {
+      width: 300px;
+      margin-bottom: 25px;
+      border: 1px solid #000;
+    }
+    .new-task-detail {
+      height: 200px;
+      border: 1px solid #000;
+    }
+    .new-task-button {
+      background-color: #242f9b;
+      color: #ffffff;
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+
+  .error-message {
+    color: #ff3333;
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 768px) {
+  .new-task {
+    width: 100% !important;
+    h2.title {
+      margin: 20px 0 20px 20px;
+    }
+    &-form {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .new-task {
+    &-form {
+      display: block;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    &-select-list,
+    &-title,
+    &-detail,
+    &-limit {
+      width: 100% !important;
+      max-width: 400px;
+    }
+  }
+}

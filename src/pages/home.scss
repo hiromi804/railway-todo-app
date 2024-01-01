@@ -1,0 +1,99 @@
+.taskList {
+  margin: 50px auto;
+  list-style: none;
+  width: 1000px;
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+    .list-menu {
+      text-align: right;
+    }
+  }
+
+  .list-tab {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    &-item {
+      flex-shrink: 0;
+      width: 100px;
+      padding: 0 25px;
+      text-overflow: normal;
+      margin-right: 5px;
+      border: solid 1px #242f9b;
+      justify-content: center;
+      align-items: center;
+    }
+    .active {
+      background-color: #242f9b;
+      color: #ffffff;
+    }
+  }
+  .tasks {
+    margin-top: 25px;
+    &-header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .display-select-wrapper {
+    width: 100px;
+    margin: 0 0 25px auto;
+    .display-select {
+      width: 100%;
+    }
+  }
+
+  .error-message {
+    color: #ff3333;
+  }
+}
+
+.task-item {
+  list-style-type: none;
+  height: 120px;
+  width: calc(100% - 25px);
+  background-color: #f5f5f5;
+  padding-left: 25px;
+  font-size: large;
+  border: solid 1px #ffffff;
+  margin-bottom: 20px;
+  &-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #000000;
+    padding-top: 10px;
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 768px) {
+  h1 {
+    margin: 20px 0 0 20px;
+  }
+  .taskList {
+    width: 100%;
+  }
+  .list-header,
+  .list-tab {
+    margin: 0 20px;
+  }
+  .tasks {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .list-header {
+    display: block !important;
+    margin-bottom: 15px;
+  }
+  .list-tab-item {
+    width: auto !important;
+  }
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+.edit-task {
+  width: 1000px;
+  margin: 0 auto;
+
+  &-form {
+    color: #555555;
+    .edit-task-title,
+    .edit-task-detail,
+    .edit-task-limit {
+      width: 300px;
+      margin-bottom: 25px;
+      border: 1px solid #000;
+    }
+    .delete-task-button {
+      color: #ff3333;
+      border: solid 1px #ff3333;
+      width: 80px;
+      height: 40px;
+      margin: 25px 5px;
+      border-radius: 5px;
+    }
+    .edit-task-button {
+      background-color: #242f9b;
+      color: #ffffff;
+      width: 80px;
+      height: 40px;
+      border-radius: 5px;
+    }
+  }
+  .error-message {
+    color: #ff3333;
+  }
+}
+
+// レスポンシブ
+@media screen and (max-width: 768px) {
+  .edit-task {
+    width: 100% !important;
+    &-form {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .title {
+      margin: 20px 0 20px 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .edit-task {
+    &-form {
+      display: block;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    &-select-list,
+    &-title,
+    &-detail,
+    &-limit {
+      width: 100% !important;
+      max-width: 400px;
+    }
+  }
+}
